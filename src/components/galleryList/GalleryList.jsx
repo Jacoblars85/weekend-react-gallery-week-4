@@ -1,7 +1,23 @@
 import GalleryItem from "../GalleryItem/GalleryItem";
+import axios from 'axios';
 
-function GalleryList({ gallery }) {
 
+function GalleryList({ gallery, getGallery }) {
+    // got stuck here because i didnt put /gallery/like/id. i didnt have gallery in it.
+    const updateLike = (e) => {
+        const picId = e.target.id
+        console.log('picid', picId);
+        axios({
+            url: `/gallery/like/${picId}`,
+            method: 'PUT'
+          }).then((response) => {
+            getGallery();
+          }).catch((error) =>{
+            console.log(error, 'Error in updating gallery');
+          })
+    
+    }
+    
 
     return (
         gallery.map((pic) => {
@@ -9,9 +25,10 @@ function GalleryList({ gallery }) {
             <div key={pic.id}>
               <GalleryItem pic={pic} />
                 
-                <br />
-
-              <button>love it!</button>
+              <button 
+              id={pic.id}
+              onClick={updateLike}
+              >love it!</button>
 
               <p> {pic.likes} people love this!</p>
             </div>

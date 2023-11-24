@@ -32,7 +32,8 @@ function App() {
         </header>
 
         <p>The gallery goes here!</p>
-        <GalleryList gallery={gallery}/>
+        
+        <GalleryList gallery={gallery} getGallery={getGallery}/>
 
       </div>
     );
