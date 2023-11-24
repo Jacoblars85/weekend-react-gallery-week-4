@@ -11,6 +11,8 @@ function GalleryItem({ pic }) {
       if (isPicture) {
         return (
             <>
+            <h5>{pic.title}</h5>
+
             <p>{pic.description}</p>
             </>
         )
