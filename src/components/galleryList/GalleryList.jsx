@@ -30,7 +30,7 @@ function GalleryList({ gallery, getGallery }) {
               onClick={updateLike}
               >love it!</button>
 
-              <p> {pic.likes} people love this!</p>
+              <p> {pic.likes > 0 ? `${pic.likes} people love this!` : `No people love this :(`}</p>
             </div>
             )
           })
