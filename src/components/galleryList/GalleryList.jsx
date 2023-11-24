@@ -10,10 +10,10 @@ function GalleryList({ gallery }) {
               <GalleryItem pic={pic} />
                 
                 <br />
-                
+
               <button>love it!</button>
 
-              <p>people love this!</p>
+              <p> {pic.likes} people love this!</p>
             </div>
             )
           })
