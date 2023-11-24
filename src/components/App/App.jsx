@@ -1,6 +1,29 @@
 import React from 'react';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
+import './App.css';
 
 function App() {
+  const [gallery, setGallery] = useState([])
+
+  useEffect(() => {
+    getGallery()
+  }, [])
+
+  const getGallery = () => {
+    axios({
+      method: 'GET',
+      url: '/gallery'
+    })
+      .then((response) => {
+        setGallery(response.data)
+      })
+      .catch((error) => {
+        console.log('getGallery fail:', error);
+      })
+  }
+
+
     return (
       <div>
         <header>

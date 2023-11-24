@@ -18,6 +18,7 @@ pool.query(sqlQueryText)
       res.send(dbResult.rows);
   }).catch((dbError) => {
       res.sendStatus(500);
+      console.log('error in server get route', dbError);
   })
 });
 
