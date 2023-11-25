@@ -1,0 +1,26 @@
+/* .box {
+    border: 1px solid black;
+} */
+
+
+.single-box {
+    border: 1px solid black;
+    margin: 5px;
+    height: 250px;
+    width: 250px;
+}
+
+/* button {
+} */
+
+h5 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+}

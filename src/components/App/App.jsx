@@ -26,15 +26,15 @@ function App() {
 
 
     return (
-      <div>
+      <div data-testid="app" >
         <header>
           <h1>React Gallery</h1>
         </header>
 
         <p>The gallery goes here!</p>
-        
-        <GalleryList gallery={gallery} getGallery={getGallery}/>
 
+        <GalleryList gallery={gallery} getGallery={getGallery}/>
+        
       </div>
     );
 }

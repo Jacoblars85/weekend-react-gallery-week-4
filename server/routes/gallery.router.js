@@ -16,7 +16,7 @@ router.put('/like/:id', (req, res) => {
 
     pool.query(sqlQueryText, sqlValues)
     .then((dbResult) => {
-        res.sendStatus(201);
+        res.sendStatus(200);
         console.log('PUT successful');
     }).catch((dbError) => {
         res.sendStatus(500);
