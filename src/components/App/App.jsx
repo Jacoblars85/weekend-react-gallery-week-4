@@ -31,7 +31,7 @@ function App() {
           <h1>React Gallery</h1>
         </header>
 
-        <p>The gallery goes here!</p>
+        <h3>The gallery goes here!</h3>
         <div>
         <GalleryList gallery={gallery} getGallery={getGallery}/>
         </div>

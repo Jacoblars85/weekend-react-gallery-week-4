@@ -11,7 +11,7 @@ function GalleryItem({ pic, updateLike }) {
       if (isPicture) {
         return (
             <div className='description'>
-            <p data-testid="description" >{pic.description}</p>
+            <ul data-testid="description" >      {pic.description}</ul>
             </div>
         )
       } else {
