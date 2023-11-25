@@ -21,19 +21,13 @@ function GalleryList({ gallery, getGallery }) {
     
 
     return (
-        <div data-testid="galleryList">
+        <div data-testid="galleryList" className="uno-box">
         {gallery.map((pic) => {
             return (
-            <div  className="single-box" key={pic.id}>
+            <div key={pic.id}>
+
               <GalleryItem pic={pic} updateLike={updateLike}/>
                 
-              {/* <button 
-              data-testid="like"
-              id={pic.id}
-              onClick={updateLike}
-              >love it!</button>
-
-              <p > {pic.likes > 0 ? `${pic.likes} people love this!` : `No people love this :(`}</p> */}
             </div>
             )
           })}

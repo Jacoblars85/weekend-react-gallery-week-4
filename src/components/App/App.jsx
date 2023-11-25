@@ -32,9 +32,9 @@ function App() {
         </header>
 
         <p>The gallery goes here!</p>
-
+        <div>
         <GalleryList gallery={gallery} getGallery={getGallery}/>
-        
+        </div>
       </div>
     );
 }
